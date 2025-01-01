@@ -11,3 +11,22 @@ function getComputerChoice(){
         return "Scissors!"
     }
 }
+
+function getHumanChoice(){
+    let humanChoice = window.prompt("Type 'Rock', 'Paper' or 'Scissors'");
+    if(humanChoice =="Rock"){
+        return "Rock!"
+    }
+    else if(humanChoice =="Paper"){
+        return "Paper!"
+    }
+    else if(humanChoice =="Scissors"){
+        return "Scissors!"
+    }
+    else{
+        console.log("That is not a valid choice, try again")
+    }
+
+}
+
+console.log(getHumanChoice());
