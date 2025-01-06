@@ -1,0 +1,30 @@
+
+.flex-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    margin: 50px;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+}
+
+ul{
+   list-style: none; 
+   justify-items: center;
+}
+h1{
+    text-align: center;
+}
+h2{
+    margin-top: 0;
+}
+p{
+    text-align: center;
+}
+.result{
+    text-align: center;
+}
