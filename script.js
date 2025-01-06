@@ -64,8 +64,8 @@ function incrementScore(winner){
         case "Computer": computerScore+=1; break
         case "Nobody": break
     }
-    const humanScoreRecord = document.querySelector(".human-score")
-    const computerScoreRecord = document.querySelector(".computer-score")
+    const humanScoreRecord = document.querySelector(".human-score");
+    const computerScoreRecord = document.querySelector(".computer-score");
     humanScoreRecord.textContent = `Human: ${humanScore}`
     computerScoreRecord.textContent = `Computer: ${computerScore}`
 }
@@ -77,10 +77,18 @@ function checkForGameWinner(){
         gameWinner = "Computer";
     }
     if (gameWinner != null){
-        document.querySelector(".content").remove();
+        document.querySelector(".left").remove();
+        document.querySelector(".choices").remove();
+        document.querySelector(".result").remove();
+
         message = document.createElement("h1");
         message.textContent = `${gameWinner} Wins!`;
-        document.querySelector("body").appendChild(message);   
+        document.querySelector(".flex-wrapper").appendChild(message);   
+
+        reset_button = document.createElement("button");
+        reset_button.textContent = "Play Again?";
+        reset_button.addEventListener("click",()=>location.reload());
+        document.querySelector(".flex-wrapper").appendChild(reset_button)
     }
 }
 
